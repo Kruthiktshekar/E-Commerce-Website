@@ -51,7 +51,7 @@ function Cart() {
                 product && product.map((item) => {
                     return (
                         <>
-                            <div className='container'>
+                            <div className='container d-flex flex-column bg-dark bg-opacity-10 my-4 rounded-3'>
                                 <div className='row my-4' key={item.id}>
                                     <div className='col-md-4 mb-5 '>
                                         <img src={item.image} alt={item.title}
