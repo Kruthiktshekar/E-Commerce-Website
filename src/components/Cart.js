@@ -12,6 +12,9 @@ function Cart() {
     const [product, setProduct] = useState(undefined)
     const [empty,setEmpty]= useState(true)
 
+    const smiley = "😃"
+    const sadSmiley = "☹️"
+
     const dispatch = useDispatch()
 
     const state = useSelector(state => state.handleCart)
@@ -25,7 +28,7 @@ function Cart() {
     useEffect(()=>{
         console.log(state)
 
-        if(state.length!==undefined && state.length!==0){
+        if(state.length!==0){
             setEmpty(false)
         }
         else{
@@ -91,8 +94,8 @@ function Cart() {
                             <div className="card-body cart">
                                 <div className="col-sm-12 empty-cart-cls text-center">
                                     <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" className="img-fluid mb-4 mr-3" alt='Your Cart Is Empty...' />
-                                    <h3><strong>Your Cart is Empty</strong></h3>
-                                    <h4>Add something to make me happy....  </h4>
+                                    <h3><strong>Your Cart is Empty...{sadSmiley}</strong></h3>
+                                    <h4>Add something to make me happy...{smiley}</h4>
                                     <Link to="/products" className="btn btn-primary cart-btn-transform m-3" data-abc="true">continue shopping</Link>
                               </div>
                             </div>
