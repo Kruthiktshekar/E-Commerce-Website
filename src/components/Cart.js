@@ -26,8 +26,6 @@ function Cart() {
     }, [state])
 
     useEffect(()=>{
-        console.log(state)
-
         if(state.length!==0){
             setEmpty(false)
         }
